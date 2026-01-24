@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toss King Ragav</title>
 
-<!-- META PIXEL : SAFE PERMANENT VERSION -->
+<!-- META PIXEL : FINAL LOCKED VERSION (NO VALUE / NO CURRENCY) -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
-n=f.fbq=function(){n.callMethod?
+n=f.fbq=function(){
+n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';
@@ -17,10 +21,16 @@ s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','2360148577771642');
+/* PIXEL INIT – HARD BLOCK VALUE/CURRENCY */
+fbq('init','2360148577771642',{
+  value: null,
+  currency: null
+});
 
-/* ONLY SAFE EVENT */
-fbq('track','PageView');
+/* ONLY PAGEVIEW – LOCKED */
+fbq('track','PageView',{},{
+  eventID:'pv_no_value_no_currency'
+});
 </script>
 
 <noscript>
@@ -28,10 +38,6 @@ fbq('track','PageView');
 src="https://www.facebook.com/tr?id=2360148577771642&ev=PageView&noscript=1"/>
 </noscript>
 <!-- END META PIXEL -->
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Toss King Ragav</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
@@ -41,38 +47,50 @@ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
 url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d");
 background-size:cover;background-position:center}
 .card{
-max-width:420px;width:100%;background:linear-gradient(180deg,#1e88e5,#0d47a1);
+max-width:420px;width:100%;
+background:linear-gradient(180deg,#1e88e5,#0d47a1);
 border-radius:20px;padding:26px 22px;text-align:center;
 box-shadow:0 20px 45px rgba(0,0,0,.6)}
 h1{font-size:28px;margin-bottom:6px}
-.tag{background:#00e5ff;color:#000;padding:6px 14px;border-radius:20px;
-font-size:13px;font-weight:bold;margin-bottom:12px;display:inline-block}
+.tag{
+background:#00e5ff;color:#000;padding:6px 14px;
+border-radius:20px;font-size:13px;font-weight:bold;
+margin-bottom:12px;display:inline-block}
 .desc{font-size:14px;opacity:.95;margin-bottom:18px}
 .stats{display:flex;gap:14px;margin-bottom:20px}
-.stat{flex:1;background:#00e5ff;color:#000;border-radius:14px;
-padding:16px 10px;font-weight:bold}
+.stat{
+flex:1;background:#00e5ff;color:#000;
+border-radius:14px;padding:16px 10px;font-weight:bold}
 .join a{
-display:block;margin:22px 0;padding:16px;background:#ff1744;color:#fff;
-border-radius:14px;font-size:18px;font-weight:bold;text-decoration:none;
+display:block;margin:22px 0;padding:16px;
+background:#ff1744;color:#fff;
+border-radius:14px;font-size:18px;
+font-weight:bold;text-decoration:none;
 animation:pulse 1.4s infinite}
 @keyframes pulse{
 0%{box-shadow:0 0 0 0 rgba(255,23,68,.7)}
 70%{box-shadow:0 0 0 16px rgba(255,23,68,0)}
 100%{box-shadow:0 0 0 0 rgba(255,23,68,0)}
 }
-.features{display:flex;justify-content:space-between;
-background:rgba(0,0,0,.35);border-radius:14px;
-padding:14px 8px;font-size:12px}
+.features{
+display:flex;justify-content:space-between;
+background:rgba(0,0,0,.35);
+border-radius:14px;padding:14px 8px;font-size:12px}
 .feature{width:25%;text-align:center}
 small{opacity:.75}
 </style>
 </head>
 
 <body>
+
 <div class="card">
 <h1>TOSS KING RAGAV</h1>
 <div class="tag">🏏 Cricket Community</div>
-<p class="desc">Live match talks • Toss discussion<br>No betting • Entertainment only</p>
+
+<p class="desc">
+Live match talks • Toss discussion<br>
+No betting • Entertainment only
+</p>
 
 <div class="stats">
 <div class="stat"><h2>CRICKET</h2><p>LIVE</p></div>
@@ -80,7 +98,10 @@ small{opacity:.75}
 </div>
 
 <div class="join">
-<a id="joinBtn" href="https://t.me/+wmllZGWbtBthNGM1" target="_blank">
+<a id="joinBtn"
+   href="https://t.me/+wmllZGWbtBthNGM1"
+   target="_blank"
+   rel="noopener noreferrer">
 🚀 SUBSCRIBE TELEGRAM CHANNEL
 </a>
 </div>
@@ -95,10 +116,12 @@ small{opacity:.75}
 <small>© 2026 Toss King Ragav</small>
 </div>
 
-<!-- ACCURATE CLICK TRACKING (NO FAKE, NO DUPLICATE) -->
+<!-- SAFE UNIQUE CLICK TRACKING -->
 <script>
-document.getElementById("joinBtn").addEventListener("click", function(){
-fbq('trackCustom','TelegramJoinClick');
+document.getElementById("joinBtn").addEventListener("click",function(){
+  fbq('trackCustom','TelegramJoinClick',{},{
+    eventID:'telegram_click_unique'
+  });
 },{once:true});
 </script>
 
